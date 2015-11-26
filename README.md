@@ -9,3 +9,4 @@ Samples for [SwiftBond/Bond](https://github.com/SwiftBond/Bond)
 - Binding from ViewModel
 - Observe a notification
 - UITableView
+- Bidirectional Binding

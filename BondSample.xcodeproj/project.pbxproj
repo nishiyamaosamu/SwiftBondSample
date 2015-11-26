@@ -26,6 +26,8 @@
 		171D87131C06AB0C005DB059 /* BasicBindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D87121C06AB0C005DB059 /* BasicBindViewController.swift */; };
 		171D87151C06AB1D005DB059 /* BasicBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171D87141C06AB1D005DB059 /* BasicBind.storyboard */; };
 		2E3DA46A04E907CD7D38BA98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB0F9F69C71791A4D60BE0A /* Pods.framework */; };
+		768288121C07549600A6CC5B /* BidirectionalBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768288111C07549600A6CC5B /* BidirectionalBindingViewController.swift */; };
+		768288141C0754A100A6CC5B /* BidirectionalBinding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768288131C0754A100A6CC5B /* BidirectionalBinding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		171D87051C06A996005DB059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171D87121C06AB0C005DB059 /* BasicBindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBindViewController.swift; sourceTree = "<group>"; };
 		171D87141C06AB1D005DB059 /* BasicBind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicBind.storyboard; sourceTree = "<group>"; };
+		768288111C07549600A6CC5B /* BidirectionalBindingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidirectionalBindingViewController.swift; sourceTree = "<group>"; };
+		768288131C0754A100A6CC5B /* BidirectionalBinding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BidirectionalBinding.storyboard; sourceTree = "<group>"; };
 		9FB0F9F69C71791A4D60BE0A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D636CFA86D0117AAEC721F86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2A2C465E37BA6332D649729 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				171B5FBC1C06BFE200AA5EC2 /* Bind from ViewModel */,
 				171B5FC51C06CB4800AA5EC2 /* Observe a notification  */,
 				171B5FD91C06DAD000AA5EC2 /* UITableView */,
+				768288101C07547B00A6CC5B /* Bidirectional Binding */,
 				171D86E31C06A996005DB059 /* AppDelegate.swift */,
 				171D86E51C06A996005DB059 /* ViewController.swift */,
 				171D86E71C06A996005DB059 /* Main.storyboard */,
@@ -220,6 +225,15 @@
 				9FB0F9F69C71791A4D60BE0A /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		768288101C07547B00A6CC5B /* Bidirectional Binding */ = {
+			isa = PBXGroup;
+			children = (
+				768288111C07549600A6CC5B /* BidirectionalBindingViewController.swift */,
+				768288131C0754A100A6CC5B /* BidirectionalBinding.storyboard */,
+			);
+			name = "Bidirectional Binding";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +349,7 @@
 				171D86EB1C06A996005DB059 /* Assets.xcassets in Resources */,
 				171D87151C06AB1D005DB059 /* BasicBind.storyboard in Resources */,
 				171B5FDD1C06DB0500AA5EC2 /* MyTableView.storyboard in Resources */,
+				768288141C0754A100A6CC5B /* BidirectionalBinding.storyboard in Resources */,
 				171D86E91C06A996005DB059 /* Main.storyboard in Resources */,
 				171B5FC91C06CB9800AA5EC2 /* ObserveNotification.storyboard in Resources */,
 			);
@@ -413,6 +428,7 @@
 				171D87131C06AB0C005DB059 /* BasicBindViewController.swift in Sources */,
 				171B5FC71C06CB7B00AA5EC2 /* ObserveNotificationViewController.swift in Sources */,
 				171B5FDB1C06DAFB00AA5EC2 /* MyTableViewController.swift in Sources */,
+				768288121C07549600A6CC5B /* BidirectionalBindingViewController.swift in Sources */,
 				171D86E61C06A996005DB059 /* ViewController.swift in Sources */,
 				171B5FC41C06C21300AA5EC2 /* TimeViewModel.swift in Sources */,
 				171D86E41C06A996005DB059 /* AppDelegate.swift in Sources */,

@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaW-lG-Lnh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaW-lG-Lnh">
                                 <rect key="frame" x="20" y="133" width="560" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -34,7 +34,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrB-4Y-4mb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label2 with .skip(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrB-4Y-4mb">
                                 <rect key="frame" x="20" y="162" width="560" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -44,8 +44,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZP-vy-Zbm">
-                                <rect key="frame" x="20" y="191" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label3 with .map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-Jg-V1P">
+                                <rect key="frame" x="20" y="191" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZP-vy-Zbm">
+                                <rect key="frame" x="20" y="220" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -57,13 +64,11 @@
                             <constraint firstItem="iaW-lG-Lnh" firstAttribute="top" secondItem="4Xv-C6-lAE" secondAttribute="bottom" constant="16" id="PBD-H1-8Cj"/>
                             <constraint firstItem="wrB-4Y-4mb" firstAttribute="top" secondItem="iaW-lG-Lnh" secondAttribute="bottom" constant="8" symbolic="YES" id="Qwz-wE-FbU"/>
                             <constraint firstItem="iaW-lG-Lnh" firstAttribute="leading" secondItem="4Xv-C6-lAE" secondAttribute="leading" id="X9M-h1-I80"/>
-                            <constraint firstItem="4ZP-vy-Zbm" firstAttribute="top" secondItem="wrB-4Y-4mb" secondAttribute="bottom" constant="8" symbolic="YES" id="aA1-Iw-tba"/>
                             <constraint firstItem="4Xv-C6-lAE" firstAttribute="leading" secondItem="dNN-uZ-jca" secondAttribute="leadingMargin" id="ozc-TY-D1X"/>
                             <constraint firstItem="wrB-4Y-4mb" firstAttribute="leading" secondItem="iaW-lG-Lnh" secondAttribute="leading" id="p9U-8A-JZk"/>
                             <constraint firstItem="wrB-4Y-4mb" firstAttribute="trailing" secondItem="iaW-lG-Lnh" secondAttribute="trailing" id="pPx-09-bOy"/>
                             <constraint firstItem="4Xv-C6-lAE" firstAttribute="top" secondItem="Dzc-S5-g2m" secondAttribute="bottom" constant="23" id="tAB-Jj-x7V"/>
                             <constraint firstItem="iaW-lG-Lnh" firstAttribute="trailing" secondItem="4Xv-C6-lAE" secondAttribute="trailing" id="xNR-by-tsl"/>
-                            <constraint firstItem="4ZP-vy-Zbm" firstAttribute="leading" secondItem="wrB-4Y-4mb" secondAttribute="leading" id="zTk-9X-WrA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Basic Bind" id="gQp-dZ-ucX"/>
@@ -72,6 +77,7 @@
                         <outlet property="button" destination="4ZP-vy-Zbm" id="QjI-uG-p3j"/>
                         <outlet property="label" destination="iaW-lG-Lnh" id="0eY-eA-uWK"/>
                         <outlet property="label2" destination="wrB-4Y-4mb" id="6s6-NR-DvQ"/>
+                        <outlet property="label3" destination="1dj-Jg-V1P" id="Ybo-gv-T0B"/>
                         <outlet property="textField" destination="4Xv-C6-lAE" id="fPg-J7-4P1"/>
                     </connections>
                 </viewController>

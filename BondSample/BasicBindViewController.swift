@@ -14,11 +14,12 @@ class BasicBindViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         textField.bnd_text
             .observe { text in
                 print(text)
@@ -26,11 +27,22 @@ class BasicBindViewController: UIViewController {
         
         textField.bnd_text
             .bindTo(label.bnd_text)
+
+        //Skip at first time
+        textField.bnd_text
+            .observeNew { text in
+                print(text)
+        }
         
+        //Skip at first time
+        textField.bnd_text
+            .skip(1)
+            .bindTo(label2.bnd_text)
+
 
         textField.bnd_text
             .map { "Hi " + $0! }
-            .bindTo(label2.bnd_text)
+            .bindTo(label3.bnd_text)
         
         button.bnd_controlEvent
             .filter { $0 == UIControlEvents.TouchUpInside }

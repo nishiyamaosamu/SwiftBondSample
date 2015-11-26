@@ -1,7 +1,10 @@
 # SwiftBondSample
 
 Samples for [SwiftBond/Bond](https://github.com/SwiftBond/Bond)
->Bond is a Swift binding framework that takes binding concept to a whole new level. It's simple, powerful, type-safe and multi-paradigm - just like Swift.
+
+- Bond 4.2
+- Xcode 7.1.1
+- Swift 2.1
 
 ## This samples has
 - Basic binding

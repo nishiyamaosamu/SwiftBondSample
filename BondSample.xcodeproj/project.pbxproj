@@ -25,6 +25,10 @@
 		171D87041C06A996005DB059 /* BondSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D87031C06A996005DB059 /* BondSampleUITests.swift */; };
 		171D87131C06AB0C005DB059 /* BasicBindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D87121C06AB0C005DB059 /* BasicBindViewController.swift */; };
 		171D87151C06AB1D005DB059 /* BasicBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171D87141C06AB1D005DB059 /* BasicBind.storyboard */; };
+		17B15C2F1C07D9CE003CE77B /* FeedTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B15C2E1C07D9CE003CE77B /* FeedTableView.storyboard */; };
+		17B15C311C07D9DC003CE77B /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B15C301C07D9DC003CE77B /* FeedTableViewController.swift */; };
+		17B15C331C07DA47003CE77B /* FeedTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B15C321C07DA47003CE77B /* FeedTableViewModel.swift */; };
+		17B15C351C07DB8E003CE77B /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B15C341C07DB8E003CE77B /* Feed.swift */; };
 		2E3DA46A04E907CD7D38BA98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB0F9F69C71791A4D60BE0A /* Pods.framework */; };
 		768288121C07549600A6CC5B /* BidirectionalBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768288111C07549600A6CC5B /* BidirectionalBindingViewController.swift */; };
 		768288141C0754A100A6CC5B /* BidirectionalBinding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768288131C0754A100A6CC5B /* BidirectionalBinding.storyboard */; };
@@ -72,6 +76,10 @@
 		171D87051C06A996005DB059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171D87121C06AB0C005DB059 /* BasicBindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBindViewController.swift; sourceTree = "<group>"; };
 		171D87141C06AB1D005DB059 /* BasicBind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicBind.storyboard; sourceTree = "<group>"; };
+		17B15C2E1C07D9CE003CE77B /* FeedTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeedTableView.storyboard; sourceTree = "<group>"; };
+		17B15C301C07D9DC003CE77B /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		17B15C321C07DA47003CE77B /* FeedTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewModel.swift; sourceTree = "<group>"; };
+		17B15C341C07DB8E003CE77B /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		768288111C07549600A6CC5B /* BidirectionalBindingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidirectionalBindingViewController.swift; sourceTree = "<group>"; };
 		768288131C0754A100A6CC5B /* BidirectionalBinding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BidirectionalBinding.storyboard; sourceTree = "<group>"; };
 		9FB0F9F69C71791A4D60BE0A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +175,7 @@
 		171D86E21C06A996005DB059 /* BondSample */ = {
 			isa = PBXGroup;
 			children = (
+				17B15C2D1C07D8FD003CE77B /* UITableView + feed with Alamofire */,
 				171D87111C06AAEC005DB059 /* Basic bind */,
 				171B5FB71C06B19700AA5EC2 /* Combine multiple inputs */,
 				171B5FBC1C06BFE200AA5EC2 /* Bind from ViewModel */,
@@ -208,6 +217,17 @@
 				171D87141C06AB1D005DB059 /* BasicBind.storyboard */,
 			);
 			name = "Basic bind";
+			sourceTree = "<group>";
+		};
+		17B15C2D1C07D8FD003CE77B /* UITableView + feed with Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				17B15C2E1C07D9CE003CE77B /* FeedTableView.storyboard */,
+				17B15C301C07D9DC003CE77B /* FeedTableViewController.swift */,
+				17B15C321C07DA47003CE77B /* FeedTableViewModel.swift */,
+				17B15C341C07DB8E003CE77B /* Feed.swift */,
+			);
+			name = "UITableView + feed with Alamofire";
 			sourceTree = "<group>";
 		};
 		408D6F29ADA2E93F79EE6E3F /* Pods */ = {
@@ -345,6 +365,7 @@
 			files = (
 				171D86EE1C06A996005DB059 /* LaunchScreen.storyboard in Resources */,
 				171B5FB91C06B24000AA5EC2 /* CombineMultipleInputs.storyboard in Resources */,
+				17B15C2F1C07D9CE003CE77B /* FeedTableView.storyboard in Resources */,
 				171B5FC01C06C07B00AA5EC2 /* BindFromViewModel.storyboard in Resources */,
 				171D86EB1C06A996005DB059 /* Assets.xcassets in Resources */,
 				171D87151C06AB1D005DB059 /* BasicBind.storyboard in Resources */,
@@ -425,12 +446,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				171B5FBE1C06C06E00AA5EC2 /* BindFromViewModelViewController.swift in Sources */,
+				17B15C351C07DB8E003CE77B /* Feed.swift in Sources */,
 				171D87131C06AB0C005DB059 /* BasicBindViewController.swift in Sources */,
+				17B15C331C07DA47003CE77B /* FeedTableViewModel.swift in Sources */,
 				171B5FC71C06CB7B00AA5EC2 /* ObserveNotificationViewController.swift in Sources */,
 				171B5FDB1C06DAFB00AA5EC2 /* MyTableViewController.swift in Sources */,
 				768288121C07549600A6CC5B /* BidirectionalBindingViewController.swift in Sources */,
 				171D86E61C06A996005DB059 /* ViewController.swift in Sources */,
 				171B5FC41C06C21300AA5EC2 /* TimeViewModel.swift in Sources */,
+				17B15C311C07D9DC003CE77B /* FeedTableViewController.swift in Sources */,
 				171D86E41C06A996005DB059 /* AppDelegate.swift in Sources */,
 				171B5FBB1C06B25D00AA5EC2 /* CombineMultipleInputsViewController.swift in Sources */,
 			);

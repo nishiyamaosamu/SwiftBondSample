@@ -23,7 +23,11 @@ class FeedTableViewModel : NSObject {
                 if let value = response.result.value {
                     let json = JSON(value)
                     for (_, subJson) in json {
-                        let feed = Feed(title: subJson["title"].stringValue, username: subJson["user"]["id"].stringValue, userImageURL: NSURL(string: subJson["user"]["profile_image_url"].stringValue)!, url: NSURL(string: subJson["url"].stringValue)!)                        
+                        let feed = Feed(title: subJson["title"].string,
+                            username: subJson["user"]["id"].string,
+                            userImageURL: subJson["user"]["profile_image_url"].string,
+                            url: subJson["url"].string
+                        )
                         self.items.append(feed)
                     }
                 }
@@ -32,5 +36,4 @@ class FeedTableViewModel : NSObject {
             }
         }
     }
-    
 }

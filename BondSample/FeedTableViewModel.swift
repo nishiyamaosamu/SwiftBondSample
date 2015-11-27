@@ -23,7 +23,7 @@ class FeedTableViewModel : NSObject {
                 if let value = response.result.value {
                     let json = JSON(value)
                     for (_, subJson) in json {
-                        let feed = Feed(title: subJson["title"].stringValue, username: subJson["user"]["id"].stringValue)
+                        let feed = Feed(title: subJson["title"].stringValue, username: subJson["user"]["id"].stringValue, userImageURL: NSURL(string: subJson["user"]["profile_image_url"].stringValue)!, url: NSURL(string: subJson["url"].stringValue)!)                        
                         self.items.append(feed)
                     }
                 }

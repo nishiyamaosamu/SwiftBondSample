@@ -25,14 +25,20 @@ class FeedTableViewController: UIViewController {
         dataSource.bindTo(tableView) { indexPath, dataSource, tableView in
             let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! FeedTableCell
             let feed = dataSource[indexPath.section][indexPath.row]
-            feed.title.bindTo(cell.title.bnd_text).disposeIn(cell.bnd_bag)
-            feed.username.bindTo(cell.username.bnd_text).disposeIn(cell.bnd_bag)
-            feed.userImage.bindTo(cell.userImageView.bnd_image).disposeIn(cell.bnd_bag)
+            feed.title
+                .bindTo(cell.title.bnd_text)
+                .disposeIn(cell.bnd_bag)
+            feed.username
+                .map{ "@" + $0! }
+                .bindTo(cell.username.bnd_text)
+                .disposeIn(cell.bnd_bag)
+            feed.userImage
+                .bindTo(cell.userImageView.bnd_image)
+                .disposeIn(cell.bnd_bag)
+            
             feed.fetchImageIfNeeded()
             return cell
         }
-        
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("onUpdate:"), userInfo: nil, repeats: true)
         
         tableView.delegate = self
     }
@@ -41,16 +47,9 @@ class FeedTableViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func onUpdate(timer : NSTimer){
-        self.timeCounter--
-        print(self.timeCounter)
-        
-        self.navigationItem.title = "Update in \(self.timeCounter) sec"
-        if self.timeCounter <= 0 {
-            self.feedViewModel.request()
-            self.navigationItem.title = "Requested!!"
-            timer.invalidate()
-        }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.feedViewModel.request()
     }
     
 }

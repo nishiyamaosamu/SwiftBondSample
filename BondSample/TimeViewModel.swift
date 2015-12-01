@@ -11,7 +11,7 @@ import Bond
 
 class TimeViewModel : NSObject {
     
-    let timestamp = Observable<NSTimeInterval>(0)
+    let timestamp = Observable<NSDate>(NSDate())
     
     override init() {
         super.init()
@@ -20,7 +20,7 @@ class TimeViewModel : NSObject {
     }
     
     func onUpdate(timer : NSTimer){
-        timestamp.next(NSDate().timeIntervalSince1970 * 1000)
+        timestamp.value = NSDate()
     }
     
 }

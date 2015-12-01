@@ -19,15 +19,13 @@ class BindFromViewModelViewController : UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         timeViewModel.timestamp
-            .map { "\($0)" }
-            .bindTo(label.bnd_text)
-        
-        NSNotificationCenter.defaultCenter().bnd_notification("aaa", object: nil)
-            .observe { notification in
-                print("Got \(notification)")
+            .map {
+                let date_formatter = NSDateFormatter()
+                date_formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+                return date_formatter.stringFromDate($0)
             }
-            .disposeIn(bnd_bag)
-        
+            .bindTo(label.bnd_text)
+
     }
     
     override func didReceiveMemoryWarning() {

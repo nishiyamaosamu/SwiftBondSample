@@ -14,9 +14,7 @@ class FeedTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let feedViewModel = FeedTableViewModel()
-    var dataSource = ObservableArray<ObservableArray<Feed>>()
-    var timeCounter = 3
-    
+    var dataSource = ObservableArray<ObservableArray<Feed>>()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +22,7 @@ class FeedTableViewController: UIViewController {
         
         dataSource.bindTo(tableView) { indexPath, dataSource, tableView in
             let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! FeedTableCell
-            let feed = dataSource[indexPath.section][indexPath.row]
+            let feed:Feed = dataSource[indexPath.section][indexPath.row]
             feed.title
                 .bindTo(cell.title.bnd_text)
                 .disposeIn(cell.bnd_bag)
@@ -56,8 +54,10 @@ class FeedTableViewController: UIViewController {
 
 extension FeedTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let feed = dataSource[indexPath.section][indexPath.row]
-        let safariVC = SFSafariViewController(URL: feed.url)
-        self.navigationController?.showViewController(safariVC, sender: nil)
+        let feed:Feed = dataSource[indexPath.section][indexPath.row]
+        if let url = feed.url {
+            let safariVC = SFSafariViewController(URL: url)
+            self.navigationController?.showViewController(safariVC, sender: nil)
+        }
     }
 }
